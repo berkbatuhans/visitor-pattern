@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MKO-kQ-tts">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product Page View Controller-->
+        <scene sceneID="6j9-6x-7sI">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="MKO-kQ-tts" customClass="ProductPageViewController" customModule="VisitorPatternExample" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ze9-94-hlu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="134"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="P6H-FX-4Tl">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f9P-Rh-oic" customClass="DetailViewController" customModule="VisitorPatternExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ses-MB-6Ef">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0b-4R-Ky0">
+                                <rect key="frame" x="20" y="64" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAA-gR-JKS">
+                                <rect key="frame" x="20" y="84" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qyQ-0K-fLp">
+                                <rect key="frame" x="20" y="805" width="374" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S0b-4R-Ky0" firstAttribute="leading" secondItem="3Ju-Lm-gcO" secondAttribute="leading" constant="20" id="0N1-19-3gF"/>
+                            <constraint firstItem="qyQ-0K-fLp" firstAttribute="leading" secondItem="3Ju-Lm-gcO" secondAttribute="leading" constant="20" id="17v-fA-PTi"/>
+                            <constraint firstItem="3Ju-Lm-gcO" firstAttribute="trailing" secondItem="S0b-4R-Ky0" secondAttribute="trailing" constant="20" id="89g-c4-EAv"/>
+                            <constraint firstItem="S0b-4R-Ky0" firstAttribute="top" secondItem="3Ju-Lm-gcO" secondAttribute="top" constant="20" id="970-gv-o1Z"/>
+                            <constraint firstItem="JAA-gR-JKS" firstAttribute="leading" secondItem="3Ju-Lm-gcO" secondAttribute="leading" constant="20" id="GzY-f3-wDR"/>
+                            <constraint firstItem="JAA-gR-JKS" firstAttribute="top" secondItem="S0b-4R-Ky0" secondAttribute="bottom" constant="20" id="N2a-5u-38S"/>
+                            <constraint firstItem="3Ju-Lm-gcO" firstAttribute="bottom" secondItem="qyQ-0K-fLp" secondAttribute="bottom" constant="20" id="Tow-W1-f2l"/>
+                            <constraint firstItem="3Ju-Lm-gcO" firstAttribute="trailing" secondItem="JAA-gR-JKS" secondAttribute="trailing" constant="20" id="ZgM-4a-Dn1"/>
+                            <constraint firstItem="3Ju-Lm-gcO" firstAttribute="trailing" secondItem="qyQ-0K-fLp" secondAttribute="trailing" constant="20" id="vDV-bl-fhg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Ju-Lm-gcO"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="qyQ-0K-fLp" id="bgg-2n-YIr"/>
+                        <outlet property="productNameLabel" destination="S0b-4R-Ky0" id="zDP-Zl-Qz2"/>
+                        <outlet property="productPriceLabel" destination="JAA-gR-JKS" id="2tk-l6-aRk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaw-A8-zxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="134"/>
+        </scene>
+    </scenes>
+</document>
